@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+    .box {
+      float: left;
+      width: 33.33%;
+      height: 200px;
+      background-color: aquamarine;
+      border: 1px solid black;
+      /* padding: 20px; */
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+      .box-container {
+        float: none;
+      }
+
+      .box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clearfix">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+
+</html>
